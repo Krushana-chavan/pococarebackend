@@ -62,7 +62,7 @@ const Login = async (req, res) => {
         delete user.password;
         res.status(200).json({ msg: "Login Succesfull!", token,refreshtoken,user});
       } else {
-        res.status(400).json({ error: "Check details once and try again!" });
+        res.status(401).json({ error: "Check details once and try again!" });
       }
     });
   } else {
